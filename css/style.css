@@ -1,0 +1,159 @@
+:root {
+  --primery-color: #112d4e;
+  --secondary-color: #3f72af;
+  --app-bg: #f9f7f7;
+  --soft-color: #dbe2ef;
+  --placeholder-color: #7b7b7b;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+ul {
+  margin: 0;
+  padding-left: 0;
+  list-style: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  width: 100%;
+}
+
+b {
+  font-weight: inherit;
+}
+
+body {
+  margin: 0;
+  font-family: 'Ubuntu', sans-serif;
+  background-color: var(--secondary-color);
+  color: var(--primery-color);
+}
+
+.section {
+  padding-top: 15px;
+}
+
+.wrapper {
+  max-width: 600px;
+  margin: 0 auto;
+  margin-top: 56px;
+  padding: 20px 55px;
+  background: var(--app-bg);
+  box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.25);
+  border-radius: 20px;
+}
+
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: 0 auto;
+}
+
+.header {
+  text-align: center;
+}
+
+.app-title {
+  margin-bottom: 10px;
+  font-family: 'Ubuntu';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 1.15;
+
+  color: var(--primery-color);
+}
+
+.form {
+  position: relative;
+  margin: 0 auto;
+  margin-bottom: 15px;
+  max-width: 250px;
+  height: 32px;
+}
+
+.input-submit {
+  max-width: 250px;
+  height: 32px;
+
+  padding: 10px 0 10px 10px;
+
+  background: var(--soft-color);
+  border: 1px solid rgba(177, 177, 177, 0.4);
+  border-radius: 5px;
+}
+
+.input-submit::placeholder {
+  font-family: 'Ubuntu';
+
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.16;
+  color: var(--placeholder-color);
+}
+
+.btn-submit {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 45px;
+  height: 32px;
+  outline: none;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #fff;
+  background: var(--secondary-color);
+  border: transparent;
+  border-radius: 0px 5px 5px 0px;
+
+  cursor: pointer;
+}
+
+.icon-plus {
+  width: 24.55px;
+  height: 24px;
+}
+
+.line {
+  max-width: 500px;
+  height: 0px;
+  margin: 0 auto;
+
+  border: 1px solid rgba(0, 0, 0, 0.5);
+}
+
+.todo-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+
+  padding: 12px 15px;
+  max-width: 490px;
+  height: 55px;
+
+  background: #dbe2ef;
+  border-radius: 5px;
+}
+
+.todo-item:last-child {
+  margin-bottom: 0;
+}
