@@ -2,15 +2,15 @@
 
 export const items = [
   {
-    text: 'Купить хлеб',
+    text: 'To buy bread',
     isDone: true,
   },
   {
-    text: 'Купить молоко',
+    text: 'To buy milk',
     isDone: false,
   },
   {
-    text: 'Пополнить телефон',
+    text: 'To pay my phone bill',
     isDone: true,
   },
 ];
