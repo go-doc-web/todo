@@ -1,14 +1,37 @@
-const getItemTemplate = text => {
-  return `     <li class="todo-item">
-              <div>
-                <input class="input-checkbox" type="checkbox" name="" />
-                <span>${text}</span>
-              </div>
-              <button type="button">del</button>
-            </li>`;
-};
+// 1. Генерируем шаблон заметки
 
-const items = ['item1', 'item2', 'item3'];
+import { getItemTemplate } from './getItemTemplate.js';
 
-const list = items.map(item => getItemTemplate(item));
-console.log(list);
+// 2. Создаем модель данных
+import { items } from './data-items.js';
+
+// 1.2 Выбираем элементы DOM
+import { refs } from './refs.js';
+
+// Собітие на form
+
+refs.form.addEventListener('submit', additem);
+
+// 3. Функция Рендер item
+
+function renderToDoEl() {
+  refs.list.innerHTML = '';
+  const lis = items.map(getItemTemplate);
+  refs.list.insertAdjacentHTML('beforeend', lis.join(' '));
+}
+
+function additem(e) {
+  e.preventDefault();
+  const { value } = e.target.elements.input;
+
+  const payload = {
+    isDone: false,
+    text: value,
+  };
+  refs.form.reset();
+
+  items.push(payload);
+  renderToDoEl();
+}
+
+renderToDoEl();

@@ -157,3 +157,16 @@ body {
 .todo-item:last-child {
   margin-bottom: 0;
 }
+
+.btn-del-item {
+  background-color: var(--secondary-color);
+  color: #fff;
+  border: none;
+  padding: 3px 6px;
+  cursor: pointer;
+  transition: background-color 150ms linear;
+}
+
+.btn-del-item:hover {
+  background-color: red;
+}
